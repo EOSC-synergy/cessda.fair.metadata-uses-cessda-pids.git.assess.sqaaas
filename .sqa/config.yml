@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.fair.metadata-uses-cessda-pids:
+      branch: main
+      repo: https://github.com/cessda/cessda.fair.metadata-uses-cessda-pids.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-pids git:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-ultramarine-deer.sh
+        container: qc.acc_tacky-sepia-caterpillar
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-pids find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-razzmatazz-goat.sh
+        container: qc.doc_surly-silver-moorhen
+      github.com/cessda/cessda.fair.metadata-uses-cessda-pids git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-ultramarine-sponge.sh
+        container: qc.doc_shaggy-wisteria-seahorse
+      github.com/cessda/cessda.fair.metadata-uses-cessda-pids markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-magenta-foxhound.sh
+        container: qc.doc_cloudy-aquamarine-whale
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-pids licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-magenta-cattle.sh
+        container: qc.lic_cheeky-sangria-tetra
+  QC.Met:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-pids cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-auburn-buffalo.sh
+        container: qc.met_skanky-crimson-hyena
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-pids checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-teal-corgi.sh
+        container: qc.sty_ugly-apricot-zorse
+      github.com/cessda/cessda.fair.metadata-uses-cessda-pids hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-viridian-neanderthal.sh
+        container: qc.sty_goopy-taupe-guppy
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.fair.metadata-uses-cessda-pids get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-orange-armadillo.sh
+        container: qc.ver_messy-emerald-lionfish
+timeout: 5400
