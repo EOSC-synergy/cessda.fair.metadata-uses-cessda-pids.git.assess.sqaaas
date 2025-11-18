@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-pids git:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-cream-uakari.sh
-        container: qc.acc_bluesy-purple-guppy
+        - /usr/bin/env sh .sqa/script.droopy-dandelion-coral.sh
+        container: qc.acc_smelly-alizarin-flounder
   QC.Doc:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-pids find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-malachite-capuchin.sh
-        container: qc.doc_snoopy-cinnamon-ocelot
+        - /usr/bin/env sh .sqa/script.shaggy-olive-bullfrog.sh
+        container: qc.doc_nippy-copper-chimpanzee
       github.com/cessda/cessda.fair.metadata-uses-cessda-pids git:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-amethyst-wolfhound.sh
-        container: qc.doc_skanky-myrtle-akita
+        - /usr/bin/env sh .sqa/script.stuffy-teal-oyster.sh
+        container: qc.doc_lousy-goldenrod-zebu
       github.com/cessda/cessda.fair.metadata-uses-cessda-pids markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-red-pig.sh
-        container: qc.doc_slimy-cream-devil
+        - /usr/bin/env sh .sqa/script.tacky-wheat-ferret.sh
+        container: qc.doc_beady-crimson-weasel
   QC.Lic:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-pids licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-lime-fly.sh
-        container: qc.lic_nippy-pink-retriever
+        - /usr/bin/env sh .sqa/script.scanty-azure-akita.sh
+        container: qc.lic_pokey-sangria-dingo
   QC.Met:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-pids cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-firebrick-ray.sh
-        container: qc.met_ready-salmon-monkey
+        - /usr/bin/env sh .sqa/script.muzzy-burgundy-bat.sh
+        container: qc.met_woozy-dandelion-guppy
   QC.Sty:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-pids checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-seashell-bordeaux.sh
-        container: qc.sty_nerdy-tomato-goat
+        - /usr/bin/env sh .sqa/script.thirsty-sapphire-quail.sh
+        container: qc.sty_gimpy-mauve-quoll
       github.com/cessda/cessda.fair.metadata-uses-cessda-pids hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-lilac-swan.sh
-        container: qc.sty_hasty-heliotrope-albatross
+        - /usr/bin/env sh .sqa/script.gloppy-magenta-hyrax.sh
+        container: qc.sty_sickly-sapphire-butterfly
   QC.Ver:
     repos:
       github.com/cessda/cessda.fair.metadata-uses-cessda-pids get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-alizarin-panda.sh
-        container: qc.ver_fuzzy-cobalt-magpie
+        - /usr/bin/env sh .sqa/script.thirsty-seashell-gibbon.sh
+        container: qc.ver_seedy-beige-booby
 timeout: 5400
